@@ -1,0 +1,6 @@
+.form, label {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    text-transform: capitalize;
+}
