@@ -5,7 +5,7 @@ const Header = () => {
    
     return (
       <header className='header'>
-         <h1 className="title" onClick={console.log('console')}>Form</h1>
+         <h1 className="title">Form</h1>
       </header>
     )
 }
