@@ -1,7 +1,7 @@
 import React from 'react';
 import { useState } from 'react';
 import { service } from '../../services/services';
-import './Form.css';
+import './Form.scss';
 
 const Form = () => {
   const [formData, setFormData] = useState({
