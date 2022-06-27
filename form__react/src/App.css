@@ -1,0 +1,7 @@
+.container {
+    margin: 15% auto;
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    font-family: 'Roboto', sans-serif;
+  }
