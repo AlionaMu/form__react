@@ -1,0 +1,36 @@
+.form, label {
+  display: flex;
+  flex-direction: column;
+  margin: 5px;
+}
+
+label > p {
+  margin: 0;
+}
+
+.form__button {
+  width: 115px;
+  margin-top: 15px;
+  padding: 10px 30px;
+  border-radius: 20px;
+  cursor: pointer;
+  letter-spacing: .9px;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: none;
+  background-color: green;
+  transition: all .3s;
+}
+
+.form__button:hover {
+  background-color: #d9dbbc;
+}
+
+input { 
+  margin-top: 5px;
+}
+
+.error {
+  color: red;
+  font-size: 10px;
+}

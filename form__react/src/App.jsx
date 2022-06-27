@@ -2,7 +2,7 @@ import React from 'react';
 import Header from './components/Header/Header';
 import Form from './components/Form/Form';
 import Users from './components/Users/Users';
-import './App.scss';
+import './App.css';
 
 import {
   BrowserRouter,
