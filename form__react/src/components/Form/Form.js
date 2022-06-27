@@ -1,52 +1,71 @@
 import React from 'react';
+import { useState } from 'react';
 import './Form.css';
 
 const Form = () => {
-   
-    return (
-      <form className='form'>
-        <label>
-          your first name / second name
-          <input
-            type="email"
-            value='enter your first name and second name'
-            onChange={e => { console.log( e.target.value) }}
-          />
-        </label>
-        <label>
-          your e-mail
-          <input
-            type="mail"
-            value='enter e-mail'
-            onChange={e => { console.log( e.target.value) }}
-          />
-        </label>
-        <label>
-          your phone number
-          <input
-            type="tel"
-            value='enter phone number'
-            onChange={e => { console.log( e.target.value) }}
-          />
-        </label>
-        <label>
-          your date of birth
-          <input
-            type="date"
-            value='enter date of your birth'
-            onChange={e => { console.log( e.target.value) }}
-          />
-        </label>
-        <label>
-          your message
-          <input
-            type="text"
-            value='write smth...'
-            onChange={e => { console.log( e.target.value) }}
-          />
-        </label>
-      </form>
-    )
+  const [formData, setFormData] = useState({});
+
+  const handleInputName = ({ target }) => {
+		setFormData({
+			...formData,
+			[target.name]: target.value,
+		});
+	};
+
+  const handleSubmit = e => {
+    e.preventDefault();
+  };
+
+  return (
+    <form className='form' onSubmit={handleSubmit}>
+      <label>
+        your first name / second name
+        <input
+          type="text"
+          placeholder='Enter name and surname'
+          name='names'
+          onChange={handleInputName}
+        />
+      </label>
+      <label>
+        your e-mail
+        <input
+          type="mail"
+          placeholder='Enter e-mail'
+          name='mail'
+          onChange={handleInputName}
+        />
+      </label>
+      <label>
+        your phone number
+        <input
+          type="tel"
+          placeholder='Enter phone number'
+          name='phone'
+          onChange={handleInputName}
+        />
+      </label>
+      <label>
+        your date of birth
+        <input
+          type="date"
+          placeholder='Enter date of birth'
+          name='birth'
+          onChange={handleInputName}
+        />
+      </label>
+      <label>
+        your message
+        <input
+          type="text"
+          placeholder='Write smth...'
+          name='msg'
+          onChange={handleInputName}
+        />
+      </label>
+      <button className='form__button' onClick={console.log(formData)}>Submit</button>
+    </form>
+  )
 }
 
 export default Form;
